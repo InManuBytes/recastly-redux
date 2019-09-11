@@ -17,13 +17,15 @@
     "bootstrap": "^4.0.0-alpha.2",
     "enzyme-redux": "^0.1.7",
     "jquery": "^2.2.1",
+    "latest": "^0.2.0",
     "lodash": "^4.6.1",
+    "n": "^6.0.1",
     "popper.js": "^1.12.9",
     "react": "^15.6.1",
     "react-dom": "^15.4.2",
-    "react-redux": "^5.0.6",
-    "redux": "^3.6.0",
-    "redux-thunk": "2.2.0",
+    "react-redux": "^5.1.1",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "thunk": "0.0.1"
   },
   "devDependencies": {
