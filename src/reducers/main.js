@@ -1,8 +1,16 @@
 import { combineReducers } from 'redux';
-import currentVideo from './currentVideo.js';
-import videoList from './videoList.js';
+import currentVideoReducer from './currentVideo.js';
+import videoListReducer from './videoList.js';
+import videoListReducer from './videoList.js';
 
-var rootReducer = () => {};
+// NOTE. ROOTREDUCER WAS ORIGINALLY AN ANONYMOUS FUNCTION. WE CHANGED IT TO ASSIGN TO A VALUE OF COMBINEREDUCERS
+var rootReducer = combineReducers({currentVideo: currentVideoReducer, videoList: videoListReducer})
+
+  // const previousVideos = state.videoList
+  // const newState = {};
+  // newState.currentVideo = action.video;
+  // newState.videos = previousVideos;
+  // return newState
 
 //TODO: define the root reducer for this app
 
