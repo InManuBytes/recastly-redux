@@ -26,9 +26,10 @@ describe('containers', function() {
     beforeEach(function() {
       store.dispatch.reset();
     });
-    it('should have a prop called handleSearchInputChange which dispatches handleVideoSearch', function() {
-      component.props().handleSearchInputChange('kitten mittens');
-      expect(component.props().handleSearchInputChange).to.be.a('function');
+    // NOTE: I CHANGED NAME TO handleInputChange from handleSearchInputChange in order to match our code
+    it('should have a prop called handleInputChange which dispatches handleVideoSearch', function() {
+      component.props().handleInputChange('kitten mittens');
+      expect(component.props().handleInputChange).to.be.a('function');
       expect(store.dispatch.callCount).to.equal(1);
     });
     it('should be created using the React-Redux connect method', function() {
