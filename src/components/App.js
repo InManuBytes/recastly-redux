@@ -1,10 +1,10 @@
 import React from 'react';
-import VideoList from './VideoList.js';
-import VideoPlayer from './VideoPlayer.js';
-import Search from './Search.js';
+import VideoListContainer from '../containers/VideoListContainer.js';
+import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
+import SearchContainer from '../containers/SearchContainer.js';
 
 class App extends React.Component {
-  constructor(props) { // props.state = {}... where is handleVideoSearch?
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -16,9 +16,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    //console.log(this.props); --> this broke the tests
     this.getYouTubeVideos('react tutorials');
-    //this.props.handleVideoSearch('react tutorial');
+    //handleVideoSearch('react tutorial');
   }
 
   handleVideoListEntryTitleClick(video) {
@@ -39,27 +38,22 @@ class App extends React.Component {
     );
   }
 
-  //TODO: swap out the React components below for the container components
-  //  you wrote in the 'containers' directory.
-  // Do we just use our container names, and what do we do with the
-  // props we used to pass in?
+  // Redux: swap out the React components below for the container components
+  // Note: no longer passing any props
   render() {
     return (
       <div>
         <nav className="navbar">
           <div className="col-md-6 col-md-offset-3">
-            <Search getYouTubeVideos={this.getYouTubeVideos}/>
+            <SearchContainer />
           </div>
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <VideoPlayer video={this.state.currentVideo}/>
+            <VideoPlayerContainer />
           </div>
           <div className="col-md-5">
-            <VideoList
-              handleVideoListEntryTitleClick={this.handleVideoListEntryTitleClick.bind(this)}
-              videos={this.state.videos}
-            />
+            <VideoListContainer />
           </div>
         </div>
       </div>

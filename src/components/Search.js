@@ -1,17 +1,21 @@
 import React from 'react';
 
-// props: getYouTubeVideos(e.target.value)
+// previous props with React passed down from App.js: getYouTubeVideos (line 14)
+// props from - SearchContainers: handleInputChange
 class Search extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       value: ''
     };
   }
 
   handleInputChange(e) {
-    this.props.getYouTubeVideos(e.target.value);
+    // this.props.getYouTubeVideos(e.target.value); -only React
+    // in SearchContainers, the mapDispatchToProps returns:
+    // handleInputChange: (query) => dispatch(handleVideoSearch(query))
+    // where query = e.target.value
+    this.props.handleInputChange(e.target.value); // redux takes over
     this.setState({
       value: e.target.value
     });
