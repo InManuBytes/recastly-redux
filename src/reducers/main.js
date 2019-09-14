@@ -8,12 +8,6 @@ var rootReducer = combineReducers({
   videoList: videoListReducer
 });
 
-// const previousVideos = state.videoList
-// const newState = {};
-// newState.currentVideo = action.video;
-// newState.videos = previousVideos;
-// return newState
-
 //TODO: define the root reducer for this app
 
 //HINT: you'll need to combine the other two reducers in this

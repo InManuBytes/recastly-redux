@@ -10,11 +10,11 @@ var mapStateToProps = (state) => {
   };
 };
 
-var mapDispatchToProps = (dispatch, video) => {
-  //To see the video being passed down uncomment line below
-  //console.log('mapDispatch VideoList VIDEO:', video);
+var mapDispatchToProps = (dispatch) => {
+  // since the handleVideo...Click is a function that takes in a video
+  // we have to make sure it looks the same passed down
   return {
-    handleVideoListEntryTitleClick: () => dispatch(changeVideo(video))
+    handleVideoListEntryTitleClick: (video) => dispatch(changeVideo(video))
   };
 };
 
