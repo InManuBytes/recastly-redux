@@ -17,7 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getYouTubeVideos('react tutorials');
-    //handleVideoSearch('react tutorial');
+    //handleVideoSearch('react tutorial');?
   }
 
   handleVideoListEntryTitleClick(video) {
@@ -39,7 +39,10 @@ class App extends React.Component {
   }
 
   // Redux: swap out the React components below for the container components
-  // Note: no longer passing any props
+  // App is no longer passing any props since we are using connect.
+  // Notes: Is there a way to get delete the code in lines 7-16 and 23-39?
+  //        that is, a way to use handleVideoSearch (line 20) instead of
+  //        getYouTubeVideos?
   render() {
     return (
       <div>
