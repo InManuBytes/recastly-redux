@@ -18,7 +18,7 @@
     "babel-preset-react": "6.24.1",
     "bootstrap": "^4.0.0-alpha.2",
     "enzyme-redux": "^0.1.7",
-    "jquery": "^2.2.1",
+    "jquery": "^3.4.0",
     "latest": "^0.2.0",
     "lodash": "^4.6.1",
     "n": "^6.0.1",
